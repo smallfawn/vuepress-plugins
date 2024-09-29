@@ -9,7 +9,7 @@ import busuanziPlugin from '@smallfawn/vuepress-plugin-busuanzi';
 export default defineUserConfig({
   plugins: [
     googleAdSensePlugin({
-      id: 'ca-pub-2247483547544632',
+      id: 'ca-pub-xxxxxx',
     }),
   ],
 });
