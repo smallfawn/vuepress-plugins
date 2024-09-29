@@ -1,0 +1,23 @@
+{
+    "name": "@smallfawn/vuepress-plugin-busuanzi",
+    "version": "1.0.6",
+    "license": "MIT",
+    "description": "VuePress 2 plugin - busuanzi",
+    "keywords": [
+      "vuepress-plugin",
+      "vuepress",
+      "vuepress 2",
+      "vuepress-next",
+      "plugin",
+      "busuanzi"
+    ],
+    "main": "dist/index.js",
+    "files": [
+      "dist/**"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/smallfawn/vuepress-plugins/vuepress-plugin-busuanzi"
+    },
+    "type": "module"
+  }
