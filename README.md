@@ -15,6 +15,7 @@ export default defineUserConfig({
 });
 ```
 # 数据统计
+使用组件 `<busuanzi />` 即可显示 => 本站总访问量x次
 ```shell
 npm install -D @smallfawn/vuepress-plugin-busuanzi
 ```
