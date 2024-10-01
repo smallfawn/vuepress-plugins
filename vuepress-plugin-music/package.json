@@ -1,6 +1,6 @@
 {
     "name": "@smallfawn/vuepress-plugin-music",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
     "description": "VuePress 2 plugin - music",
     "keywords": [
