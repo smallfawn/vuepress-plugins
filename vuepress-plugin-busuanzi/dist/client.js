@@ -1,5 +1,6 @@
 import { defineClientConfig } from '@vuepress/client';
-import { h, createApp, onMounted } from 'vue';
+//import { h, createApp, onMounted } from 'vue';
+import { h } from 'vue';
 import busuanzi from './app.vue';
 const server = __server;
 export default defineClientConfig({
@@ -28,7 +29,14 @@ export default defineClientConfig({
         }
 
     },*/
-    setup() {
+    enhance({ app }) {
+        app.component('busuanzi', {
+            render() {
+                return h(busuanzi, { server });
+            },
+        });
+    }
+    /*setup() {
         onMounted(() => {
             const body = document.querySelector('body');
             const div = document.createElement('div');
@@ -36,5 +44,5 @@ export default defineClientConfig({
             busuanziApp.mount(div);
             body.appendChild(div);
         })
-    }
+    }*/
 });

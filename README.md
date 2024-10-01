@@ -30,6 +30,7 @@ import busuanziPlugin from "@smallfawn/vuepress-plugin-busuanzi";
 export default defineUserConfig({
   plugins: [busuanziPlugin()],
 });
+<busuanzi />; //busuanzi数据统计  组件
 ```
 
 # 音乐播放器

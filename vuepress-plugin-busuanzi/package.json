@@ -1,6 +1,6 @@
 {
     "name": "@smallfawn/vuepress-plugin-busuanzi",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "license": "MIT",
     "description": "VuePress 2 plugin - busuanzi",
     "keywords": [
