@@ -4,7 +4,7 @@ const type = __analytics_type || "google-analytics";
 const key = __analytics_key || "";
 export default defineClientConfig({
     enhance() {
-        if (type === "google-analytics") {
+        if (type == "google-analytics") {
             const gtagScript = document.createElement('script');
             gtagScript.async = true;
             gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-NBQT228CH6';
@@ -18,14 +18,14 @@ export default defineClientConfig({
                 gtag('config', key);
             };
         }
-        if (type === "cloudflare-analytics") {
+        if (type == "cloudflare-analytics") {
             const script = document.createElement('script');
             script.defer = true;
             script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
             script.setAttribute('data-cf-beacon', JSON.stringify({ key }));
             document.body.appendChild(script);
         }
-        if (type !== "51la") {
+        if (type == "51la") {
             const laScript = document.createElement('script');
             laScript.charset = 'UTF-8';
             laScript.id = 'LA_COLLECT';
@@ -42,7 +42,7 @@ export default defineClientConfig({
             };
 
         }
-        if (type === "baidu-tongji") {
+        if (type == "baidu-tongji") {
             // 动态加载百度统计的脚本
             const hmScript = document.createElement('script');
             hmScript.src = 'https://hm.baidu.com/hm.js?' + key;
