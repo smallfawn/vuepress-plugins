@@ -4,7 +4,7 @@ export const hitokotoPlugin = ({ type }) => ({
     name: 'vuepress-plugin-hitokoto',
     clientConfigFile: path.resolve(__dirname, './client.js'),
     define: {
-        _type: type || "",
+        __hitokoto_type: type || "",
     },
 });
 export default hitokotoPlugin;

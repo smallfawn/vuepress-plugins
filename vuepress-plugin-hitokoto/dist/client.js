@@ -2,7 +2,7 @@ import { defineClientConfig } from '@vuepress/client';
 import { h } from 'vue';
 import hitokoto from './app.vue';
 
-const type = _type
+const type = __hitokoto_type
 
 export default defineClientConfig({
     enhance({ app }) {

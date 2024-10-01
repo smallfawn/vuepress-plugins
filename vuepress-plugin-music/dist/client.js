@@ -2,9 +2,9 @@ import { defineClientConfig } from '@vuepress/client';
 import { onMounted, createApp } from 'vue';
 import music from './app.vue';
 
-const src = _src;
-const title = _title;
-const artist = _artist;
+const src = __music_src;
+const title = __music_title;
+const artist = __music__artist;
 
 export default defineClientConfig({
   setup() {

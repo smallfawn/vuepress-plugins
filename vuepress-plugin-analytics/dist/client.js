@@ -1,7 +1,7 @@
 import { defineClientConfig } from '@vuepress/client';
 
-const type = _type || "google-analytics";
-const key = _key || "";
+const type = __analytics_type || "google-analytics";
+const key = __analytics_key || "";
 export default defineClientConfig({
     enhance() {
         if (type === "google-analytics") {
