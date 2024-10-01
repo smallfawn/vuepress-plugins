@@ -69,3 +69,21 @@ export default defineUserConfig({
 });
 <hitokoto />; //随机一言 组件
 ```
+
+# 数据统计 google cloudflare 51.la baidu
+
+```shell
+npm install -D @smallfawn/vuepress-plugin-analytics
+```
+
+```js
+import analyticsPlugin from "@smallfawn/vuepress-plugin-analytics";
+export default defineUserConfig({
+  plugins: [
+    analyticsPlugin({
+      type: "", // 可选值 cloudflare-analytics 51la  google-analytics baidu-tongji  默认为google-analytics
+      key: "", //参考部署代码中的唯一值  51la的ID和CK为同一个
+    }),
+  ],
+});
+```
