@@ -81,8 +81,8 @@ import analyticsPlugin from "@smallfawn/vuepress-plugin-analytics";
 export default defineUserConfig({
   plugins: [
     analyticsPlugin({
-      type: "", // 可选值 cloudflare-analytics 51la  google-analytics baidu-tongji  默认为google-analytics
-      key: "", //参考部署代码中的唯一值  51la的ID和CK为同一个
+      type: "", // 可选值 cloudflare-analytics 51la-v6 51la-v5  google-analytics baidu-tongji  默认为google-analytics
+      key: "", //参考部署代码中的唯一值  51la-v6的ID和CK为同一个 
     }),
   ],
 });

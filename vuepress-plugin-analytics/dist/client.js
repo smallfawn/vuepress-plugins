@@ -26,7 +26,7 @@ export default defineClientConfig({
                 script.setAttribute('data-cf-beacon', JSON.stringify({ key }));
                 document.body.appendChild(script);
             }
-            if (type == "51la") {
+            if (type == "51la-v6") {
                 const laScript = document.createElement('script');
                 laScript.charset = 'UTF-8';
                 laScript.id = 'LA_COLLECT';
@@ -42,6 +42,14 @@ export default defineClientConfig({
                     }
                 };
 
+            }
+            if (type == "51la-v5") {
+                const laScript = document.createElement('script');
+                laScript.type = 'text/javascript';
+                laScript.src = `https://js.users.51.la/${key}.js`;
+
+                // 将 script 标签插入到 <head> 中
+                document.head.appendChild(laScript);
             }
             if (type == "baidu-tongji") {
                 // 动态加载百度统计的脚本
