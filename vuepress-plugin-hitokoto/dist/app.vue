@@ -14,6 +14,7 @@ const props = defineProps({
 })
 const hitokoto = ref('')
 onMounted(() => {
+    console.log('开始获取hitokoto')
     fetch(`https://v1.hitokoto.cn/?c=${props.type}`).then(res => res.json()).then(data => {
         hitokoto.value = data.hitokoto
     })
