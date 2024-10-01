@@ -2,7 +2,6 @@ import { defineClientConfig } from '@vuepress/client';
 
 const type = __analytics_type || "google-analytics";
 const key = __analytics_key || "";
-const document = typeof document !== 'undefined' ? document : {};
 export default defineClientConfig({
     enhance() {
         if (typeof window !== 'undefined' && typeof document !== 'undefined') {
