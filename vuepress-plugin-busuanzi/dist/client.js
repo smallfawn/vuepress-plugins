@@ -22,7 +22,7 @@ export default defineClientConfig({
             },
         });
         // <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
-        if (typeof window !== 'undefined') {
+        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
             const busuanziScript = document.createElement('script');
             busuanziScript.src = 'https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
             document.body.appendChild(busuanziScript);

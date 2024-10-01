@@ -20,7 +20,7 @@ const props = defineProps({
     }
 });
 
-if (typeof window !== 'undefined') {
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const busuanziScript = document.createElement('script');
     busuanziScript.src = '' + props.server;
     document.body.appendChild(busuanziScript);
