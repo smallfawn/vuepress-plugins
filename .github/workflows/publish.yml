@@ -1,0 +1,46 @@
+name: Publish to NPM
+
+on:
+  push:
+    branches:
+      - main # 在 main 分支推送时触发
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18" # 根据你的项目配置调整 Node.js 版本
+          registry-url: "https://registry.npmjs.org/"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Check for file changes (update or create)
+        id: check_changes
+        run: |
+          # 检测仅新增或更新的文件，不包括删除文件
+          git diff --name-status HEAD^ HEAD | grep -E '^[AM]\s' > changed-files.txt
+
+          # 检查是否有 package.json 的改动（新增或更新）
+          if grep -q "package.json" changed-files.txt; then
+            echo "Changes detected in package.json"
+            echo "publish=true" >> $GITHUB_ENV
+          else
+            echo "No relevant changes in package.json"
+            echo "publish=false" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Publish to NPM
+        if: env.publish == 'true'
+        run: |
+          npm version patch  # 增加版本号（可改为 major, minor, patch）
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # GitHub Secrets 中存储的 NPM 令牌
