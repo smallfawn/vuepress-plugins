@@ -2,7 +2,7 @@ import { path, getDirname } from '@vuepress/utils';
 
 const __dirname = getDirname(import.meta.url);
 
-export const copyrightPlugin = (copyrightText) => ({
+export const copyrightPlugin = ({copyrightText}) => ({
     name: 'vuepress-plugin-copyright',
     clientConfigFile: path.resolve(__dirname, './client.js'),
     define: {

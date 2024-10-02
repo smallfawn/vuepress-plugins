@@ -7,7 +7,7 @@ export default defineClientConfig({
         if (typeof window !== 'undefined' && typeof document !== 'undefined') {
             addEventListener('copy', function (event) {
                 // 从剪贴板数据获取用户选中的文本内容
-                let copiedContent = event.clipboardData.getData('text/plain');
+                let copiedContent = window.getSelection().toString();
 
                 // 定义版权信息
                 let copyrightInfo = copyrightText;
