@@ -1,15 +1,15 @@
 {
-    "name": "@smallfawn/vuepress-plugin-watermark",
-    "version": "1.0.7",
+    "name": "@smallfawn/vuepress-plugin-copyright",
+    "version": "1.0.0",
     "license": "MIT",
-    "description": "VuePress 2 plugin - watermark",
+    "description": "VuePress 2 plugin - copyright",
     "keywords": [
       "vuepress-plugin",
       "vuepress",
       "vuepress 2",
       "vuepress-next",
       "plugin",
-      "watermark"
+      "copyright"
     ],
     "main": "dist/index.js",
     "files": [
@@ -17,7 +17,7 @@
     ],
     "repository": {
       "type": "git",
-      "url": "https://github.com/smallfawn/vuepress-plugins/vuepress-plugin-watermark"
+      "url": "https://github.com/smallfawn/vuepress-plugins/vuepress-plugin-copyright"
     },
     "type": "module"
   }
