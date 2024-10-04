@@ -1,6 +1,6 @@
 import { defineClientConfig } from '@vuepress/client';
 import watermark from './app.vue';
-const copyrightText = __copyright_text
+const copyrightText = __smallfawn_copyright_text
 export default defineClientConfig({
     enhance({ app }) {
         app.component('watermark', watermark);

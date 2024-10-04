@@ -4,9 +4,9 @@ export const musicPlugin = ({ src, title, artist }) => ({
     name: 'vuepress-plugin-music',
     clientConfigFile: path.resolve(__dirname, './client.js'),
     define: {
-        __music__src: src || "",
-        __music__title: title || "",
-        __music__artist: artist || ""
+        __smallfawn_music__src: src || "",
+        __smallfawn_music__title: title || "",
+        __smallfawn_music__artist: artist || ""
     },
 });
 export default musicPlugin;

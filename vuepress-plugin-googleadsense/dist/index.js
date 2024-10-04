@@ -4,7 +4,7 @@ export const googleAdSensePlugin = ({ id }) => ({
     name: 'vuepress-plugin-googleadsense',
     clientConfigFile: path.resolve(__dirname, './client.js'),
     define: {
-        __googleAdSense_adsid: id || false,
+        __smallfawn_googleAdSense_adsid: id || false,
     },
 });
 export default googleAdSensePlugin;

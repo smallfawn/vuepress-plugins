@@ -1,7 +1,7 @@
 import { defineClientConfig } from '@vuepress/client';
 
-const type = __analytics_type || "google-analytics";
-const key = __analytics_key || "";
+const type = __smallfawn_analytics_type || "google-analytics";
+const key = __smallfawn_analytics_key || "";
 export default defineClientConfig({
     enhance() {
         if (typeof window !== 'undefined' && typeof document !== 'undefined') {

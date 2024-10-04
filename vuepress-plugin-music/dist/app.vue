@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount ,defineProps} from 'vue'
+import { ref, onMounted, onBeforeUnmount} from 'vue'
 import { VideoPlay, VideoPause } from '@element-plus/icons-vue' // 引入播放和暂停图标
 import { ElIcon } from 'element-plus'
 

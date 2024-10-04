@@ -4,7 +4,7 @@
     </div>
 </template>
 <script setup>
-import { defineProps, ref, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 const props = defineProps({
     type: {
         type: String,

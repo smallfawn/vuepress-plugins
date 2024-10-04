@@ -1,6 +1,6 @@
 import { defineClientConfig } from '@vuepress/client';
 
-const adsid = __googleAdSense_adsid; // 假设 adsid 是正确的 Google AdSense 客户端 ID
+const adsid = __smallfawn_googleAdSense_adsid; // 假设 adsid 是正确的 Google AdSense 客户端 ID
 
 export default defineClientConfig({
     enhance() {

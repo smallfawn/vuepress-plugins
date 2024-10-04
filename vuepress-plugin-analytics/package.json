@@ -1,6 +1,6 @@
 {
     "name": "@smallfawn/vuepress-plugin-analytics",
-    "version": "1.0.6",
+    "version": "1.0.9",
     "license": "MIT",
     "description": "VuePress 2 plugin - analytics",
     "keywords": [

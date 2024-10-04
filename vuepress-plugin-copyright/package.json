@@ -1,6 +1,6 @@
 {
     "name": "@smallfawn/vuepress-plugin-copyright",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
     "description": "VuePress 2 plugin - copyright",
     "keywords": [

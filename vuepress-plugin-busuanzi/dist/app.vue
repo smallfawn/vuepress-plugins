@@ -10,7 +10,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
 
 // 接收传递过来的 server 参数
 const props = defineProps({

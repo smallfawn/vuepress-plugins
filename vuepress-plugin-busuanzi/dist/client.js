@@ -2,7 +2,7 @@ import { defineClientConfig } from '@vuepress/client';
 //import { h, createApp, onMounted } from 'vue';
 import { h } from 'vue';
 import busuanzi from './app.vue';
-const server = __busuanzi_server;
+const server = __smallfawn_busuanzi_server;
 export default defineClientConfig({
     /*enhance({ app }) {
         app.component('busuanzi', {
