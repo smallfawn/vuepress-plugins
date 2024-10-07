@@ -2,14 +2,14 @@
 
 vuepress 插件集合 自写加收集
 
-# 谷歌广告
+# 谷歌广告 没必要 可以在meta插入
 
 ```shell
 npm install -D @smallfawn/vuepress-plugin-googleadsense
 ```
 
 ```js
-import busuanziPlugin from "@smallfawn/vuepress-plugin-busuanzi";
+import busuanziPlugin from "@smallfawn/vuepress-plugin-googleadsense";
 export default defineUserConfig({
   plugins: [
     googleAdSensePlugin({
@@ -19,7 +19,7 @@ export default defineUserConfig({
 });
 ```
 
-# 数据统计
+# 数据统计 没必要 可以在meta插入
 
 ```shell
 npm install -D @smallfawn/vuepress-plugin-busuanzi
@@ -74,7 +74,7 @@ export default defineUserConfig({
 <hitokoto />; //随机一言 组件
 ```
 
-# 数据统计 google cloudflare 51.la baidu
+# 数据统计 google cloudflare 51.la baidu 没必要 可以在meta插入
 
 ```shell
 npm install -D @smallfawn/vuepress-plugin-analytics
