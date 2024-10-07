@@ -1,21 +1,30 @@
 import { defineClientConfig } from '@vuepress/client';
 
-const adsid = __smallfawn_googleAdSense_adsid; // 假设 adsid 是正确的 Google AdSense 客户端 ID
+// 全局对象扩展定义
+if (typeof window !== 'undefined') {
+    window.adsbygoogle = window.adsbygoogle || { loaded: false, push: function () { } };
+}
+
+// 定义开发和 SSR 变量
+const __VUEPRESS_DEV__ = typeof __VUEPRESS_DEV__ !== 'undefined' ? __VUEPRESS_DEV__ : false;
+const __VUEPRESS_SSR__ = typeof __VUEPRESS_SSR__ !== 'undefined' ? __VUEPRESS_SSR__ : false;
+const ADS_ID = typeof ADS_ID !== 'undefined' ? ADS_ID : '__smallfawn_googleAdSense_adsid';
 
 export default defineClientConfig({
     enhance() {
-        if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-            if (!adsid) return; // 检查 adsid 是否存在
+        // 如果是 SSR 或者没有 ADS_ID，直接返回
+        if (__VUEPRESS_SSR__ || !ADS_ID) return;
 
-            // 创建 script 标签
-            const adsScript = document.createElement('script');
-            adsScript.async = true;
-            adsScript.setAttribute("crossorigin", "anonymous");
-            adsScript.src = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsid}`;
-
-            // 将 script 标签插入到 head 中
-            const head = document.head || document.getElementsByTagName('head')[0];
-            head.appendChild(adsScript);
+        // 避免重复加载广告脚本
+        if (window.adsbygoogle && window.adsbygoogle.loaded) {
+            return;
         }
+        // 创建广告 script 标签
+        const adsScript = document.createElement('script');
+        adsScript.setAttribute('data-ad-client', ADS_ID);
+        adsScript.async = true;
+        adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
+        // 插入 script 到 head 中
+        document.head.appendChild(adsScript);
     },
 });
